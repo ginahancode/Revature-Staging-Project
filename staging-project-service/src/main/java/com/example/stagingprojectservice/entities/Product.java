@@ -5,6 +5,8 @@ import javax.persistence.*;
 @Entity
 @Table(name="products")
 public class Product {
+
+
     @Id
     @Column(name="product_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,5 +28,14 @@ public class Product {
     private int inventory;
 
     @Column(name="price")
-    private float price;
+    private double price;
+
+    public Product(String name, String type, String technology, String size, int inventory, double price) {
+        this.name = name;
+        this.type = type;
+        this.technology = technology;
+        this.size = size;
+        this.inventory = inventory;
+        this.price = price;
+    }
 }
