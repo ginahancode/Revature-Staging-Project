@@ -22,7 +22,7 @@ public class StagingProjectServiceApplication {
 	@Bean
 	public CommandLineRunner runner() {
 		return args -> {
-			Product p1 = new Product("Angular Shirt", "Shirt", "Angular", "XL", 100, 10.99);
+			Product p1 = new Product("Angular Shirt", "Shirt", "Angular", "XL", "M", 100, 10.99, "imageURL");
 			productRepo.save(p1);
 		};
 	}
