@@ -13,8 +13,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Product {
-
-
     @Id
     @Column(name="product_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,11 +30,17 @@ public class Product {
     @Column(name="size")
     private String size;
 
+    @Column(name="gender")
+    private String gender;
+
     @Column(name="inventory")
     private int inventory;
 
     @Column(name="price")
     private double price;
+
+    @Column(name="image")
+    private String image;
 
     public int getProductID() {
         return productID;
@@ -78,6 +82,14 @@ public class Product {
         this.size = size;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     public int getInventory() {
         return inventory;
     }
@@ -94,13 +106,23 @@ public class Product {
         this.price = price;
     }
 
-    public Product(String name, String type, String technology, String size, int inventory, double price) {
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public Product(String name, String type, String technology, String size, String gender, int inventory, double price, String image) {
         this.name = name;
         this.type = type;
         this.technology = technology;
         this.size = size;
+        this.gender = gender;
         this.inventory = inventory;
         this.price = price;
+        this.image = image;
     }
 
     public Product() {
