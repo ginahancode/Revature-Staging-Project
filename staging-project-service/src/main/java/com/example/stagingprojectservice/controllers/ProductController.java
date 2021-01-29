@@ -2,10 +2,8 @@ package com.example.stagingprojectservice.controllers;
 
 import com.example.stagingprojectservice.entities.Product;
 import com.example.stagingprojectservice.repositories.ProductRepo;
-import exceptions.ResourceNotFoundException;
+import com.example.stagingprojectservice.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,19 +11,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.springframework.http.MediaType.TEXT_PLAIN;
-
 @RestController
 @RequestMapping("/api/v1")
 public class ProductController {
 
     @Autowired
     private ProductRepo productRepo;
-
-//    @Autowired
-//    public ProductController(ProductRepo productRepo) {
-//        this.productRepo = productRepo;
-//    }
 
     @GetMapping("/products")
     public List<Product> getAllProducts() {

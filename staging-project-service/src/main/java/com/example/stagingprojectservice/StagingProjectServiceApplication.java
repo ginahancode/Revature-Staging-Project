@@ -1,7 +1,9 @@
 package com.example.stagingprojectservice;
 
+import com.example.stagingprojectservice.entities.Order;
 import com.example.stagingprojectservice.entities.Product;
 import com.example.stagingprojectservice.entities.User;
+import com.example.stagingprojectservice.repositories.OrderRepo;
 import com.example.stagingprojectservice.repositories.ProductRepo;
 import com.example.stagingprojectservice.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +18,9 @@ public class StagingProjectServiceApplication {
 	@Autowired
 	public ProductRepo productRepo;
 
-	@Autowired
 	public UserRepo userRepo;
+
+	public OrderRepo orderRepo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(StagingProjectServiceApplication.class, args);
@@ -29,6 +32,9 @@ public class StagingProjectServiceApplication {
 		return args -> {
 			Product p1 = new Product("Angular Shirt", "Shirt", "Angular", "XL", "M", 100, 10.99, "imageURL");
 			productRepo.save(p1);
+
+			Order o1 = new Order(1);
+			orderRepo.save(o1);
 		};
 	}
 
