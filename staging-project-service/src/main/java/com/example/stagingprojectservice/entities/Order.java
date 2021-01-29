@@ -13,6 +13,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {
+
+
     @Id
     @Column(name="order_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,4 +22,9 @@ public class Order {
 
     @Column(name="customer_id")
     private int customerID;
+
+    public Order(int customerID) {
+        this.customerID = customerID;
+    }
+
 }
