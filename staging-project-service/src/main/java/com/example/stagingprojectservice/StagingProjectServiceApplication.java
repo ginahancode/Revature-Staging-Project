@@ -22,15 +22,14 @@ public class StagingProjectServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(StagingProjectServiceApplication.class, args);
 	}
-
-
+	
 	@Bean
 	public CommandLineRunner runner() {
 		return args -> {
 			Product p1 = new Product("Angular Shirt", "Shirt", "Angular", "XL", "M", 100, 10.99, "imageURL");
 			productRepo.save(p1);
 
-			Order o1 = new Order(1, 1);
+			Order o1 = new Order(1);
 			orderRepo.save(o1);
 		};
 	}
