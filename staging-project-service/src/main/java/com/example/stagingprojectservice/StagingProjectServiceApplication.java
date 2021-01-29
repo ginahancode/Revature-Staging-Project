@@ -18,8 +18,10 @@ public class StagingProjectServiceApplication {
 	@Autowired
 	public ProductRepo productRepo;
 
+	@Autowired
 	public UserRepo userRepo;
 
+	@Autowired
 	public OrderRepo orderRepo;
 
 	public static void main(String[] args) {
