@@ -1,9 +1,17 @@
 package com.example.stagingprojectservice.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="orders_products")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrderProduct {
     @Id
     @Column(name="orders_products_id")
