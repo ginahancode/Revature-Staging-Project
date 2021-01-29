@@ -1,10 +1,11 @@
 package com.example.stagingprojectservice.controllers;
 
-import com.example.stagingprojectservice.entities.Product;
 import com.example.stagingprojectservice.entities.User;
 import com.example.stagingprojectservice.exceptions.ResourceNotFoundException;
 import com.example.stagingprojectservice.repositories.UserRepo;
+
 import com.example.stagingprojectservice.exceptions.ResourceNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
