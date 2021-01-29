@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -15,18 +16,20 @@ import java.util.List;
 import static org.springframework.http.MediaType.TEXT_PLAIN;
 
 @RestController
-@RequestMapping(path = "/products")
+@RequestMapping("/api/v1")
 public class ProductController {
 
-    private final ProductRepo productRepo;
-
     @Autowired
-    public ProductController(ProductRepo productRepo) {
-        this.productRepo = productRepo;
-    }
+    private ProductRepo productRepo;
 
-    @GetMapping(path = "/all", produces = MediaType.TEXT_PLAIN_VALUE)
-    public String test() {
-        return "Hello World";
+//    @Autowired
+//    public ProductController(ProductRepo productRepo) {
+//        this.productRepo = productRepo;
+//    }
+
+    @GetMapping("/products")
+    @ResponseBody
+    public List<Product> getAllProducts() {
+        return productRepo.findAll();
     }
 }
