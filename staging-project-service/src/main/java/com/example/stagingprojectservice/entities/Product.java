@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="products")
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class Product {
     @Id
