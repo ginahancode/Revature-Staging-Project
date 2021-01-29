@@ -123,8 +123,8 @@ public class Product {
         this.price = price;
         this.image = image;
     }
-
-    public Product() {
-
-    }
+//
+//    public Product() {
+//
+//    }
 }

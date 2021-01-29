@@ -24,7 +24,7 @@ public class ProductController {
     }
 
     @GetMapping("/products/{id}")
-    public ResponseEntity<Product> getEmployeeById(@PathVariable(value = "id") int productId)
+    public ResponseEntity<Product> getProductById(@PathVariable(value = "id") int productId)
             throws ResourceNotFoundException {
         Product product = productRepo.findById(productId)
                 .orElseThrow(() -> new ResourceNotFoundException("Product not found for this ID: " + productId));
