@@ -1,1 +1,25 @@
-<p>navbar works!</p>
+<!-- home, shop, cart, user -->
+
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/shop">Shop</a>
+    </li>
+
+    <span class="example-spacer"></span>
+
+    <span style="display: inline-flex;"> 
+        <li class="nav-item" id="icon">
+            <i class="bi bi-cart mt-5" routerLink="/cart" title="cart"></i>
+            <!-- <a class="nav-link" >Cart</a> -->
+        </li>
+        <li class="nav-item" id="icon">
+            <i class="bi bi-person" routerLink="/login" title="login"></i>
+            <!-- <a class="nav-link" >User</a> -->
+        </li>
+    </span>
+
+</ul>

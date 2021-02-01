@@ -1,0 +1,8 @@
+.example-spacer {
+    flex: 5 1 auto;
+  }
+
+  #icon {
+      font-size: 30px;
+      padding: 10px;
+  }
