@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterComponent } from './components/filter/filter.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LoginComponent,
     AdminComponent,
     FilterComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

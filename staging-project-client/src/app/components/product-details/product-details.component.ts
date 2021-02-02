@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Product } from 'src/app/models/product';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-product-details',
@@ -13,7 +14,9 @@ export class ProductDetailsComponent implements OnInit {
   @Input() product: Product;
 
 
-  constructor(private modal: NgbModal) { }
+  constructor(private modal: NgbModal,
+              private cartService: CartService
+              ) { }
 
   ngOnInit(): void {
   }
@@ -35,6 +38,12 @@ export class ProductDetailsComponent implements OnInit {
     } else {
       return `with: ${reason}`;
     }
+  }
+
+  addToCart(product) {
+    this.cartService.addToCart(product);
+    window.alert("Product added");
+    
   }
 
 }

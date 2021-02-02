@@ -1,5 +1,5 @@
 export class Product {
-    productId: number = null;
+    productId: number;
     name: string;
     type: string;
     technology: string;
