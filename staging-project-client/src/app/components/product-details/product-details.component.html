@@ -1,1 +1,14 @@
-<p>product-details works!</p>
+<i class="bi bi-info-circle" (click)="openXl(content)"></i>
+
+
+<ng-template #content let-modal>
+    <h2>{{product.name}}</h2>
+    <img src="{{product.image}}" alt="...">
+    <h4>$ {{product.price}}</h4>
+    <h4>Gender: {{product.gender}}</h4>
+    <p>{{product.description}}</p>
+    <h5>{{product.technology}}s</h5>
+    <button class="btn btn-success">Add to Cart</button>
+
+
+</ng-template>

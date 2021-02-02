@@ -1,10 +1,11 @@
 <div class="mx-auto">
     <div class="card" style="width: 18rem;  display: inline-block; margin: 10px;" *ngFor="let product of products">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="{{product.image}}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{product.name}}</h5>
             <p class="card-text">{{product.description}}</p>
-            <a href="#" class="btn btn-primary">Product Details</a>
+            <app-product-details [product]="product"></app-product-details>
+            <!-- <a href="#" class="btn btn-primary">Product Details</a> -->
         </div>
     </div>
 </div>
