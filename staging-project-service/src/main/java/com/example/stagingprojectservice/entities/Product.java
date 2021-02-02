@@ -42,6 +42,9 @@ public class Product {
     @Column(name="image")
     private String image;
 
+    @Column(name="description")
+    private String description;
+
     public int getProductID() {
         return productID;
     }
@@ -114,7 +117,15 @@ public class Product {
         this.image = image;
     }
 
-    public Product(String name, String type, String technology, String size, String gender, int inventory, double price, String image) {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Product(String name, String type, String technology, String size, String gender, int inventory, double price, String image, String description) {
         this.name = name;
         this.type = type;
         this.technology = technology;
@@ -123,6 +134,7 @@ public class Product {
         this.inventory = inventory;
         this.price = price;
         this.image = image;
+        this.description = description;
     }
 //
 //    public Product() {
