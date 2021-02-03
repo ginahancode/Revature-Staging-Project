@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "staging-project-3826d": {
+      "hosting": {
+        "staging-project-client": [
+          "staging-project-3826d"
+        ]
+      }
+    }
+  }
+}

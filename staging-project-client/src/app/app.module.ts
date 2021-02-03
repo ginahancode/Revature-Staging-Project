@@ -14,8 +14,12 @@ import { AdminComponent } from './components/admin/admin.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterComponent } from './components/filter/filter.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BannerComponent } from './components/banner/banner.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { BannerComponent } from './components/banner/banner.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
    
