@@ -5,19 +5,19 @@
         <div class="row">
 
             <div class="col-3">
-                <h3>Item Name</h3>
+                <h4>Item Name</h4>
                 <span>{{ item.name }}</span>
             </div>
             <div class="col-3">
-                <h3>Price</h3>
+                <h4>Price</h4>
                 <span>{{ item.price | currency }}</span>
             </div>
             <div class="col-3">
-                <h3>Gender</h3>
+                <h4>Gender</h4>
                 <span>{{ item.gender}}</span>
             </div>
             <div class="col-3">
-                <h3>Delete from Cart</h3>
+                <h4>Remove from Cart</h4>
                 <span><i class="bi bi-trash" (click)="deleteItem(item)"></i></span>
             </div>
         </div>

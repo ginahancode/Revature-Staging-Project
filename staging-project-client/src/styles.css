@@ -1,6 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #343a40;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
 i:hover {
     cursor: pointer;
 }

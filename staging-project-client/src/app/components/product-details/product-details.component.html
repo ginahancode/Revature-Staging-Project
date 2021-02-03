@@ -2,13 +2,15 @@
 
 
 <ng-template #content let-modal>
-    <h2>{{product.name}}</h2>
-    <img src="{{product.image}}" alt="...">
-    <h4>$ {{product.price}}</h4>
-    <h4>Gender: {{product.gender}}</h4>
-    <p>{{product.description}}</p>
-    <h5>{{product.technology}}s</h5>
-    <button class="btn btn-success" (click)="addToCart(product)">Add to Cart</button>
+    <div class="modal-content">
+        <h2>{{product.name}}</h2>
+        <img src="{{product.image}}" alt="...">
+        <h4>$ {{product.price}}</h4>
+        <h4>Gender: {{product.gender}}</h4>
+        <p>{{product.description}}</p>
+        <h5>{{product.technology}}s</h5>
+        <button class="btn btn-success" (click)="addToCart(product)">Add to Cart</button>
+    </div>
 
 
 </ng-template>
