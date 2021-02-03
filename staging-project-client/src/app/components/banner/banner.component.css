@@ -1,0 +1,13 @@
+.btn {
+    border: 1px solid white;
+    color: white;
+    border-radius: 0 !important;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: greenyellow;
+    color: black;
+    font-weight: bolder;
+    border: 1px solid black;
+}
