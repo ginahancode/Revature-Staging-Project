@@ -1,15 +1,20 @@
-<i class="bi bi-info-circle" (click)="openXl(content)"></i>
+<i class="bi bi-info-circle"
+ (click)="openXl(content)"
+ style="color: rgb(59, 231, 231); font-size: 20px;"></i>
 
 
 <ng-template #content let-modal>
     <div class="modal-content">
         <h2>{{product.name}}</h2>
-        <img src="{{product.image}}" alt="...">
+        <img src="{{product.image}}" 
+            style="width:fit-content; height:fit-content;"
+        >
         <h4>$ {{product.price}}</h4>
         <h4>Gender: {{product.gender}}</h4>
+        <h5>Technology: {{product.technology}}</h5>
         <p>{{product.description}}</p>
-        <h5>{{product.technology}}s</h5>
-        <button class="btn btn-success" (click)="addToCart(product)">Add to Cart</button>
+       
+        <button class="btn" (click)="addToCart(product)">Add to Cart</button>
     </div>
 
 

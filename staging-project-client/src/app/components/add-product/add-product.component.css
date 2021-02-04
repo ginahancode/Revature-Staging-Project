@@ -1,0 +1,32 @@
+.form-control {
+    background-color: #343a40;
+    border-radius: 0px !important;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.form-control:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    caret-color: yellowgreen;
+    color: white;
+}
+
+label {
+    padding-top: 5px;
+}
+
+.btn {
+    border: 1px solid white;
+    color: white;
+    border-radius: 0 !important;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: greenyellow;
+    color: black;
+    font-weight: bolder;
+    border: 1px solid black;
+}

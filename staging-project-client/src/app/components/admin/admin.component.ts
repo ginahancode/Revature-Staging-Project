@@ -9,6 +9,9 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class AdminComponent implements OnInit {
 
+  showAddProduct: boolean = false;
+  showEditProduct: boolean = false;
+  showHomeUI: boolean = true;
 
   constructor(private firebaseService: FirebaseService, private router: Router) { }
 
@@ -20,4 +23,21 @@ export class AdminComponent implements OnInit {
     return this.router.navigate([ '' ]);
   }
 
+  showAdd() {
+    this.showAddProduct = true;
+    this.showHomeUI = false;
+    this.showEditProduct = false;
+  }
+
+  showHome() {
+    this.showHomeUI = true;
+    this.showAddProduct = false;
+    this.showEditProduct = false;
+  }
+
+  showEdit() {
+    this.showEditProduct = true;
+    this.showAddProduct = false;
+    this.showHomeUI = false;
+  }
 }

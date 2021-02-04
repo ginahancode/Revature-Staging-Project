@@ -1,3 +1,7 @@
 .card {
-    border: 1px solid white;
+    border: 1px solid gray;
+}
+
+.card-title {
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }

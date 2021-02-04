@@ -1,4 +1,37 @@
-<h1>Admin Component</h1>
+<h2 style="margin-top: 30px; padding-left: 20px; margin-bottom: 20px;">Admin </h2>
 
-<button (click)="signOut()">Logout</button>
-<button routerLink="add-product">Add Products</button>
+<div class="row">
+    <div class="col-3 d-flex justify-content-center ">
+        <div class="card bg-dark" style="width: 18rem;">
+            <div class="card-header text-center" style="border-bottom: 1px solid white;">
+                Controls
+            </div>
+            <ul class="list-group list-group-flush bg-dark" style="list-style-type:none;">
+                <li class="admin-link" (click)="showHome()">Admin Home</li>
+                <li class="admin-link" (click)="showEdit()">Edit Products</li>
+                <li class="admin-link" (click)="showAdd()">Add Product</li>
+                <li class="admin-link" (click)="signOut()">Logout</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-9">
+
+        <div *ngIf="showHome;">
+            <!-- Admin home content??? -->
+        </div>
+
+        <div *ngIf="showAddProduct;">
+            <app-add-product></app-add-product>
+        </div>
+        
+        <div *ngIf="showEditProduct;">
+            <app-admin-edit></app-admin-edit>
+        </div>
+        <!-- <ng-template #home>
+            Home baby
+        </ng-template> -->
+    </div>
+</div>
+
+<!-- <button (click)="signOut()">Logout</button>
+<button routerLink="add-product">Add Products</button> -->
