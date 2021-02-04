@@ -12,6 +12,10 @@ import { ProductService } from 'src/app/services/product.service';
 export class AddProductComponent implements OnInit {
 
   product: Product;
+
+  showAddedAlert: boolean = false;
+
+  productName: string = '';
   
 
   constructor(private productService: ProductService,
@@ -43,7 +47,14 @@ export class AddProductComponent implements OnInit {
       console.log(error));
     // console.log(this.addProductForm.value);
     // console.warn(this.product);
+    this.productName = this.addProductForm.value.name;
+    console.log(this.productName);
+    this.showAddedAlert = true;
     this.addProductForm.reset();
+  }
+
+  closeAlert() {
+    this.showAddedAlert=false;
   }
 
 }

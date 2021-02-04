@@ -22,6 +22,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { AdminEditComponent } from './components/admin-edit/admin-edit.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AdminEditComponent } from './components/admin-edit/admin-edit.component
     ProductDetailsComponent,
     BannerComponent,
     AddProductComponent,
-    AdminEditComponent
+    AdminEditComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

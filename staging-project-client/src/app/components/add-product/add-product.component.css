@@ -1,8 +1,9 @@
 .form-control {
     background-color: #343a40;
-    border-radius: 0px !important;
-    border: none;
-    border-bottom: 1px solid white;
+    border-radius: 40px !important;
+    /* border: none;
+    border-bottom: 1px solid white; */
+    color:white;
 }
 
 .form-control:focus {
@@ -11,6 +12,12 @@
     box-shadow: none !important;
     caret-color: yellowgreen;
     color: white;
+    border: 1px solid yellowgreen;
+}
+
+::placeholder {
+    color: yellowgreen;
+    opacity: 2;
 }
 
 label {
