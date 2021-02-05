@@ -16,20 +16,18 @@
     </thead>
     <tbody *ngFor="let product of products">
         <tr>
-            <th scope="row">{{product.roductID}}</th>
+            <th scope="row">{{product.productID}}</th>
             <td>{{product.name}}</td>
             <td>{{product.type}}</td>
             <td>{{product.gender}}</td>
             <td>{{product.inventory}}</td>
             <td>{{product.price}}</td>
             <td>
-                <span style="color: yellowgreen; font-size: 14px;">
-                    <i class="bi bi-pen" title="Edit Product"></i>
-                </span>
+              <app-update-product [product]="product" [productId]="product.productID"></app-update-product>
             </td>
             <td>
                 <span style="color: rgba(231, 62, 76, 0.781); font-size: 16px;">
-                    <i class="bi bi-trash" title="Delete Product"></i>
+                    <i class="bi bi-trash" title="Delete Product" (click)="deleteProduct(product.productID)"></i>
                 </span>
             </td>
         </tr>

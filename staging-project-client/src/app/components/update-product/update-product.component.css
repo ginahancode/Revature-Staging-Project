@@ -1,0 +1,48 @@
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color:#343a40 !important;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+.form-control {
+    background-color: #343a40;
+    border-radius: 40px !important;
+    /* border: none;
+    border-bottom: 1px solid white; */
+    color:white;
+}
+
+.form-control:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    caret-color: yellowgreen;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+}
+
+::placeholder {
+    color: white;
+    opacity: 2;
+}
+
+.btn {
+    border: 1px solid white;
+    color: white;
+    border-radius: 0 !important;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: greenyellow;
+    color: black;
+    font-weight: bolder;
+    border: 1px solid black;
+}

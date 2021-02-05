@@ -24,4 +24,18 @@ export class ProductService {
       tap(_ => console.log('Add product'))
     );
   }
+
+  deleteProduct(productId: number){
+    return this.http.delete(`${this.baseUrl}` + 'products/' + productId)
+    .pipe(
+      tap(_ => console.log('delete post'))
+    );
+  }
+
+  updateProduct(product: Product, productId: number){
+    return this.http.put(`${this.baseUrl}` + 'products/' + productId, product)
+    .pipe(
+      tap(_ => console.log('update post'))
+    );
+  }
 }

@@ -23,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { AdminEditComponent } from './components/admin-edit/admin-edit.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { UpdateProductComponent } from './components/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     BannerComponent,
     AddProductComponent,
     AdminEditComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
