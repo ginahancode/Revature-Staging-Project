@@ -1,0 +1,25 @@
+.form-control {
+    background-color: #343a40;
+    border-radius: 40px !important;
+    /* border: none;
+    border-bottom: 1px solid white; */
+    color:yellowgreen;
+}
+
+.form-control:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    caret-color: yellowgreen;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+}
+
+::placeholder {
+    color: white;
+    opacity: 2;
+}
+
+i:hover {
+    color:yellowgreen;
+}

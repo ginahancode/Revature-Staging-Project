@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -14,19 +14,31 @@ export class SearchBarComponent implements OnInit {
 
   filteredProducts: Product[] = [];
 
-  constructor(private productService: ProductService) { }
+  @Output() newItemEvent = new EventEmitter<Product[]>();
+
+  constructor(private productService: ProductService) { 
+    
+  }
 
   ngOnInit(): void {
+      
       this.productService.getProducts().subscribe((data: any[]) => {
       console.log(data);
       this.products = data;
    })
+
+
   }
 
-  searchProducts() {  
+  searchProducts() { 
+    console.log(this.products) 
     this.filteredProducts = this.products.filter(product => 
       product.technology.toLowerCase() === this.searchField.toLowerCase()
     );    
     console.warn(this.filteredProducts);
+
+    this.newItemEvent.emit(this.filteredProducts);
   }
+
+
 }

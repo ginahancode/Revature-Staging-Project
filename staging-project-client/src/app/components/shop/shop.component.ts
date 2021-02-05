@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { ProductService } from 'src/app/services/product.service';
 export class ShopComponent implements OnInit {
 
   products = [];
+
+  filteredProducts: Product[] = [];
 
   constructor(private productService: ProductService) {
     // this.products = this.productService.getProducts();
@@ -21,6 +24,11 @@ export class ShopComponent implements OnInit {
     //   console.log(data);
     //   this.products = data;
     // })
+  }
+
+  getFilteredProducts(filteredProducts: Product[] ) {
+    this.filteredProducts = filteredProducts;
+    console.log(this.filteredProducts);
   }
 
 }

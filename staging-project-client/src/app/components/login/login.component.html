@@ -1,10 +1,21 @@
 <h1>Login</h1>
-<form [formGroup]="signInForm" (ngSubmit)="signIn(signInForm)">
+<div class="row justify-content-center">
+    <div class="col-sm-7 col-md-4">
+        <form [formGroup]="signInForm" (ngSubmit)="signIn(signInForm)">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control"formControlName="email">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control"formControlName="password">
+            <button class="btn" >Sign In</button>
+        </form>
+        <h4 *ngIf="signInFailed" style="color: #f00; padding-top: 20px;">Sign in failed. Please try again.</h4>
+    </div>
+</div>
+<!-- <form [formGroup]="signInForm" (ngSubmit)="signIn(signInForm)">
     <label for="email">Email</label>
     <input type="email" name="email" formControlName="email">
     <label for="password">Password</label>
     <input type="password" name="password" formControlName="password">
     <button>Sign In</button>
 </form>
-<h4 *ngIf="signInFailed" style="color: #f00;">Sign in failed. Please try again.</h4>
-<hr>
+<h4 *ngIf="signInFailed" style="color: #f00;">Sign in failed. Please try again.</h4> -->

@@ -1,6 +1,30 @@
-<div class="input-group">
-    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-      aria-describedby="search-addon"
-      [(ngModel)]="searchField"/>
-    <button type="button" class="btn" (click)="searchProducts()">Search</button>
+
+<div class="row">
+  <div class="col-md-4 col-sm-7 ml-2">
+    <div class="input-group">
+      <input type="search" class="form-control" placeholder="Search" aria-label="Search"
+         [(ngModel)]="searchField" />
+      <span class="input-group-text border-0" id="search-addon"
+        style="background-color: #343a40; color:white;"
+      >
+        <i class="bi bi-search" (click)="searchProducts()"></i>
+      </span>
+    </div>
   </div>
+</div>
+
+
+
+
+
+<!-- <div class="row">
+  <div class="col-7">
+    <div class="input-group">
+      <input type="search" class="form-control" placeholder="Search" aria-label="Search"
+        aria-describedby="search-addon"
+        [(ngModel)]="searchField"/>
+        <i class="bi bi-search" (click)="searchProducts()">
+        </i>
+  </div>
+  </div>
+</div> -->

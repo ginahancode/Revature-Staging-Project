@@ -1,11 +1,34 @@
 <div class="mx-auto">
-    <div class="card bg-dark" style="width: 18rem;  display: inline-block; margin: 10px;" *ngFor="let product of products">
-        <img src="{{product.image}}" class="p-3" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{product.name}}</h5>
-            <p class="card-text">$ {{product.price}}</p>
-            <app-product-details [product]="product"></app-product-details>
-            <!-- <a href="#" class="btn btn-primary">Product Details</a> -->
+    <div *ngIf = "filteredProducts.length > 0;">
+    <h2 class="p-title">Search Results</h2>
+    </div>
+    <div class="row justify-content-center">
+       
+        <div class="card bg-dark" style="width: 18rem;  display: inline-block; margin: 10px;" *ngFor="let product of filteredProducts">
+            <img src="{{product.image}}" class="p-3" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">$ {{product.price}}</p>
+                <app-product-details [product]="product"></app-product-details>
+                <!-- <a href="#" class="btn btn-primary">Product Details</a> -->
+            </div>
         </div>
     </div>
+    <div>
+        <hr>
+    </div>
+    <h2 class="p-title">All Products</h2>
+    <div class="row justify-content-center">
+        
+        <div class="card bg-dark" style="width: 18rem;  display: inline-block; margin: 10px;" *ngFor="let product of products">
+            <img src="{{product.image}}" class="p-3" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">$ {{product.price}}</p>
+                <app-product-details [product]="product"></app-product-details>
+                <!-- <a href="#" class="btn btn-primary">Product Details</a> -->
+            </div>
+        </div>
+    </div>
+    
 </div>

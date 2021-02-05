@@ -11,12 +11,12 @@
     -webkit-appearance:none;
     box-shadow: none !important;
     caret-color: yellowgreen;
-    color: white;
+    color: yellowgreen;
     border: 1px solid yellowgreen;
 }
 
 ::placeholder {
-    color: yellowgreen;
+    color: white;
     opacity: 2;
 }
 
@@ -36,4 +36,8 @@ label {
     color: black;
     font-weight: bolder;
     border: 1px solid black;
+}
+
+#description {
+    border-radius: 20px;
 }

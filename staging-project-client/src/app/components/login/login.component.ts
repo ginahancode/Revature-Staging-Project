@@ -43,4 +43,8 @@ export class LoginComponent implements OnInit, OnDestroy {
             this.signInFailed = true;
         }
     }
+
+    async showAlert() {
+        this.signInFailed = true;
+    }
 }

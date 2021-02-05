@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -10,6 +11,10 @@ export class ProductComponent implements OnInit {
 
   products = [];
 
+  
+
+  @Input() filteredProducts: Product[] = [];
+
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -18,7 +23,6 @@ export class ProductComponent implements OnInit {
       // console.log(data);
       this.products = data;
     })
-
     
   }
 
