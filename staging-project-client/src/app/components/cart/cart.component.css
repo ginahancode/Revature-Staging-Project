@@ -1,0 +1,24 @@
+table {
+    color:white;
+}
+
+.card {
+    border-radius: 0px !important;
+    border: 1px solid white;
+    height:fit-content;
+}
+
+.cart-link {
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid white;
+}
+
+.cart-link:hover {
+    background-color:greenyellow;
+    color: black;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+

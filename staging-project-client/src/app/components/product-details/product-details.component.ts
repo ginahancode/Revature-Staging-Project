@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   closeResult = '';
   @Input() product: Product;
 
+  showProductAddedAlert: boolean;
 
   constructor(private modal: NgbModal,
               private cartService: CartService
@@ -42,8 +43,11 @@ export class ProductDetailsComponent implements OnInit {
 
   addToCart(product) {
     this.cartService.addToCart(product);
-    window.alert("Product added");
-    
+    this.showProductAddedAlert = true;
+  }
+
+  closeAlert() {
+    this.showProductAddedAlert = false;
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { Items } from 'src/app/models/items';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -8,20 +9,30 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CartComponent implements OnInit {
 
-  items = this.cartService.getItems();
+  items = []; 
+
+  showRemovedAlert: boolean;
+
+  @Output() cartItems: Items[] = [];
 
   constructor(private cartService: CartService) {
     console.log(this.items + "in cart c");
    }
 
   ngOnInit(): void {
-    
+   this.items = this.cartService.getItems();
+   this.cartItems = this.cartService.getItems();
   }
 
   deleteItem(product) {
     this.cartService.deleteItem(product);
     console.log(this.items);
     console.log(product);
+    this.showRemovedAlert = true;
+  }
+
+  closeAlert() {
+    this.showRemovedAlert = false;
   }
 
 }

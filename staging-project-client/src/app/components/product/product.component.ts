@@ -11,8 +11,6 @@ export class ProductComponent implements OnInit {
 
   products = [];
 
-  
-
   @Input() filteredProducts: Product[] = [];
 
   constructor(private productService: ProductService) { }

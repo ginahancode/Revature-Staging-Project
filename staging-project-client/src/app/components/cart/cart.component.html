@@ -1,6 +1,61 @@
 <h1>Cart</h1>
 
-<div class="container">
+<div class="row">
+    <div class="col-9">
+        <div *ngIf="showRemovedAlert;">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Product Removed!</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeAlert()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+        </div>
+        <table class="table justify-content-center">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Remove</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let item of items">
+                <tr>
+                    <th scope="row">{{item.name}}</th>
+                    <td>{{item.type}}</td>
+                    <td>{{item.price}}</td>
+                    <td>
+                        <span style="color: rgba(231, 62, 76, 0.781); font-size: 22px;">
+                            <i class="bi bi-trash" (click)="deleteItem(item)"></i>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-3  d-flex justify-content-center">
+
+        <div class="card bg-dark" style="width: 18rem;">
+            <div class="card-header text-center" style="border-bottom: 1px solid white;">
+                Controls
+            </div>
+            <ul class="list-group list-group-flush bg-dark" style="list-style-type:none;">
+                <li class="cart-link" routerLink="/shop">Back to Shop</li>
+                <li class="cart-link" routerLink="/checkout" style="border-bottom: 0px;">
+                    Checkout 
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<!-- <div class="container">
     <div class="row mb-3">
 
         <div class="col-3 text-center">
@@ -29,7 +84,7 @@
                 <span>{{ item.price | currency }}</span>
             </div>
             <div class="col-3 text-center">
-                <span>{{ item.gender}}</span>
+                <span>{{ item.size }}</span>
             </div>
             <div class="col-3 text-center">
                 <span style="color: rgba(231, 62, 76, 0.781); font-size: 22px;">
@@ -38,4 +93,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

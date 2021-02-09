@@ -4,40 +4,45 @@
 
 <ng-template #content let-modal>
     <div class="modal-content">
-        <h2>Update Products</h2>
-        <form >
-            <label for="name">Product Name</label>
-            <input type="text" class="form-control " [(ngModel)]="product.name" id="name" name="name" value={{product.name}} >
+        <div class="row justify-content-center">
+            <div class="col-9 m-3">
+                <h2 class="text-center">Update Product</h2>
+                <form>
+                    <label for="name">Product Name</label>
+                    <input type="text" class="form-control " [(ngModel)]="product.name" id="name" name="name"
+                        value={{product.name}}>
 
-            <label for="type"> Type</label>
-            <input type="text" class="form-control" id="type" [(ngModel)]="product.type" name="type">
+                    <label for="type"> Type</label>
+                    <input type="text" class="form-control" id="type" [(ngModel)]="product.type" name="type">
 
-            <label for="technology"> Technology</label>
-            <input type="text" class="form-control" id="technology" [(ngModel)]="product.technology" name="technology">
+                    <label for="technology"> Technology</label>
+                    <input type="text" class="form-control" id="technology" [(ngModel)]="product.technology"
+                        name="technology">
 
-            <label for="size"> Size</label>
-            <input type="text" class="form-control" id="size" [(ngModel)]="product.size" name="size">
+                    <label for="size"> Size</label>
+                    <input type="text" class="form-control" id="size" [(ngModel)]="product.size" name="size">
 
-            <label for="gender"> Gender</label>
-            <input type="text" class="form-control" id="gender" [(ngModel)]="product.gender" name="gender">
+                    <label for="gender"> Gender</label>
+                    <input type="text" class="form-control" id="gender" [(ngModel)]="product.gender" name="gender">
 
-            <label for="inventory"> Inventory</label>
-            <input type="number" class="form-control" id="inventory" [(ngModel)]="product.inventory" name="inventory">
+                    <label for="inventory"> Inventory</label>
+                    <input type="number" class="form-control" id="inventory" [(ngModel)]="product.inventory"
+                        name="inventory">
 
-            <label for="price"> Price</label>
-            <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+                    <label for="price"> Price</label>
+                    <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price">
 
-            <label for="image"> Image</label>
-            <input type="text" class="form-control" id="image" [(ngModel)]="product.image" name="image">
+                    <label for="image"> Image</label>
+                    <input type="text" class="form-control" id="image" [(ngModel)]="product.image" name="image">
 
-            <label for="description"> Description</label>
-            <textarea type="text" class="form-control" id="description" [(ngModel)]="product.description" name="description" height="30px"></textarea>
+                    <label for="description"> Description</label>
+                    <textarea type="text" class="form-control" id="description" [(ngModel)]="product.description"
+                        name="description" height="30px"></textarea>
 
+                    <button class="btn mb-5" type="submit" (click)="updateProduct()">Update Product</button>
+                </form>
 
-
-            <button class="btn mb-5" type="submit" (click)="updateProduct()">Add Product</button>
-        </form>
+            </div>
+        </div>
     </div>
-
-
 </ng-template>

@@ -1,0 +1,41 @@
+.card {
+    border: 1px solid gray;
+}
+
+.card-title {
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.p-title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+table {
+    color:white;
+}
+
+.nav-card {
+    border-radius: 0px !important;
+    border: 1px solid white;
+    height:fit-content;
+}
+
+.checkout-link {
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid white;
+}
+
+.checkout-link:hover {
+    background-color:greenyellow;
+    color: black;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+
+.total {
+    color: greenyellow;
+}

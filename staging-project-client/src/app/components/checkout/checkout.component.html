@@ -1,1 +1,38 @@
-<h1>Checkout Component</h1>
+<h1>Checkout</h1>
+
+
+<div class="row justify-content-center">
+    <div class="col-sm-10 col-md-9">
+        <h2 class="text-center">Your Items</h2>
+        <div class="card bg-dark" style="width: 18rem;  display: inline-block; margin: 10px;"
+            *ngFor="let cartItem of cartItems">
+            <img src="{{cartItem.image}}" class="p-3" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{cartItem.name}}</h5>
+                <p class="card-text">$ {{cartItem.price | currency}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2 col-md-3">
+        <div class="nav-card bg-dark" style="width: 18rem;">
+            <div class="card-header text-center" style="border-bottom: 1px solid white;">
+                Controls
+            </div>
+            <ul class="list-group list-group-flush bg-dark" style="list-style-type:none;">
+                <li class="checkout-link" routerLink="/shop">Back to Shop</li>
+                <li class="checkout-link" routerLink="/cart" style="border-bottom: 0px;">
+                    Back to Cart
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center mt-4 mx-3">
+    <div class="col-sm-10 col-md-9">
+        <h3 class="total">Total {{totalCost | currency}}</h3>
+    </div>
+    <div class="col-sm-2 col-md-3">
+        <div #paypal></div>
+    </div>
+</div>
+

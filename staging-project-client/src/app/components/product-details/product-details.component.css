@@ -28,3 +28,8 @@
     font-weight: bolder;
     border: 1px solid black;
 }
+
+.alert {
+    background-color: greenyellow;
+    color: black;
+}

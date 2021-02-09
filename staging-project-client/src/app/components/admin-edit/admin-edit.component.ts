@@ -11,6 +11,8 @@ export class AdminEditComponent implements OnInit {
 
   products = [];
 
+  showDeletedAlert: boolean = false;
+
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -30,8 +32,13 @@ export class AdminEditComponent implements OnInit {
       .subscribe(data => {
         this.products = this.products.filter(product => product.productId !== productId);
         this.getProducts();
+        this.showDeletedAlert = true;
       });
       
+  }
+
+  closeAlert() {
+    this.showDeletedAlert=false;
   }
 
 }

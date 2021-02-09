@@ -10,14 +10,17 @@
                 <li class="admin-link" (click)="showHome()">Admin Home</li>
                 <li class="admin-link" (click)="showEdit()">Edit Products</li>
                 <li class="admin-link" (click)="showAdd()">Add Product</li>
-                <li class="admin-link" (click)="signOut()">Logout</li>
+                <li class="admin-link" (click)="signOut()"
+                    style="border-bottom: 0px;">
+                    Logout
+                </li>
             </ul>
         </div>
     </div>
     <div class="col-9">
 
-        <div *ngIf="showHome;">
-            <!-- Admin home content??? -->
+        <div *ngIf="showHomeUI;">
+            <h2>Admin Home</h2>
         </div>
 
         <div *ngIf="showAddProduct;">

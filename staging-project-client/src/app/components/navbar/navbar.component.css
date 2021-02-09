@@ -7,8 +7,16 @@
       padding: 3px 15px 2px;
 }
 
+#icon:hover {
+    color: yellowgreen;
+}
+
 .nav-link {
     margin-top: 13px;
     color: white;
     
+}
+
+.nav-link:hover {
+    color: yellowgreen;
 }

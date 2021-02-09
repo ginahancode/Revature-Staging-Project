@@ -1,20 +1,29 @@
-<i class="bi bi-info-circle"
- (click)="openXl(content)"
- style="color: yellowgreen; font-size: 20px;"></i>
+<i class="bi bi-info-circle" (click)="openXl(content)" style="color: yellowgreen; font-size: 20px;"></i>
 
 
 <ng-template #content let-modal>
     <div class="modal-content">
-        <h2>{{product.name}}</h2>
-        <img src="{{product.image}}" 
-            style="width:fit-content; height:fit-content;"
-        >
+        <div *ngIf="showProductAddedAlert;">
+            <div class="alert alert-dismissible fade show" role="alert">
+                <strong>Product Added!</strong> {{product.name}} was successfully added to your cart
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeAlert()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <img src="{{product.image}}" style="width:fit-content; height:fit-content; margin: 8px;">
+                <h2 class="text-center">{{product.name}}</h2>
+            </div>
+        </div>
         <h4>$ {{product.price}}</h4>
         <h4>Gender: {{product.gender}}</h4>
         <h5>Technology: {{product.technology}}</h5>
         <p>{{product.description}}</p>
-       
-        <button class="btn" (click)="addToCart(product)">Add to Cart</button>
+
+        <a class="btn btn-lg" (click)="addToCart(product)">Add to Cart</a>
     </div>
 
 
